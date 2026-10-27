@@ -22,7 +22,10 @@ class SubtitlesPreferences(
   val font = preferenceStore.getString("sub_font", "")
   val fontSize = preferenceStore.getInt("sub_font_size", 45)
   val subScale = preferenceStore.getFloat("sub_scale", 1f)
+  
+  // DIPERBAIKI: Menggunakan getFloat dan menambahkan akhiran 'f'
   val borderSize = preferenceStore.getFloat("sub_border_size", 1.4f)
+  
   val bold = preferenceStore.getBoolean("sub_bold", false)
   val italic = preferenceStore.getBoolean("sub_italic", false)
 
@@ -30,17 +33,22 @@ class SubtitlesPreferences(
 
   val borderColor = preferenceStore.getInt("sub_color_border", Color.Black.toArgb())
   val borderStyle = preferenceStore.getEnum("sub_border_style", SubtitlesBorderStyle.OutlineAndShadow)
+  
+  // DIPERBAIKI: Menggunakan getFloat dan menambahkan akhiran 'f'
   val shadowOffset = preferenceStore.getFloat("sub_shadow_offset", 1.3f)
+  
   val backgroundColor = preferenceStore.getInt("sub_color_bg", Color.Transparent.toArgb())
 
   val justification = preferenceStore.getEnum("sub_justify", SubtitleJustification.Auto)
   val subPos = preferenceStore.getInt("sub_pos", 100)
   val persistSubPos = preferenceStore.getBoolean("sub_persist_pos", false)
 
-  val overrideAssSubs = preferenceStore.getBoolean("sub_override_ass")
+  // DIPERBAIKI: Menambahkan nilai default (false)
+  val overrideAssSubs = preferenceStore.getBoolean("sub_override_ass", false)
   val scaleByWindow = preferenceStore.getBoolean("sub_scale_by_window", true)
 
-  val defaultSubDelay = preferenceStore.getInt("sub_default_delay")
+  // DIPERBAIKI: Menambahkan nilai default (0)
+  val defaultSubDelay = preferenceStore.getInt("sub_default_delay", 0)
   val defaultSubSpeed = preferenceStore.getFloat("sub_default_speed", 1f)
 
   val pickerPath = preferenceStore.getString("sub_picker_path")
