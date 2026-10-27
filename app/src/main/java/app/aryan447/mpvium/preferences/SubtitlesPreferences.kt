@@ -20,9 +20,9 @@ class SubtitlesPreferences(
 
   val fontsFolder = preferenceStore.getString("sub_fonts_folder")
   val font = preferenceStore.getString("sub_font", "")
-  val fontSize = preferenceStore.getInt("sub_font_size", 55)
+  val fontSize = preferenceStore.getInt("sub_font_size", 45)
   val subScale = preferenceStore.getFloat("sub_scale", 1f)
-  val borderSize = preferenceStore.getInt("sub_border_size", 3)
+  val borderSize = preferenceStore.getInt("sub_border_size", 1.4)
   val bold = preferenceStore.getBoolean("sub_bold", false)
   val italic = preferenceStore.getBoolean("sub_italic", false)
 
@@ -30,7 +30,7 @@ class SubtitlesPreferences(
 
   val borderColor = preferenceStore.getInt("sub_color_border", Color.Black.toArgb())
   val borderStyle = preferenceStore.getEnum("sub_border_style", SubtitlesBorderStyle.OutlineAndShadow)
-  val shadowOffset = preferenceStore.getInt("sub_shadow_offset", 0)
+  val shadowOffset = preferenceStore.getInt("sub_shadow_offset", 1.3)
   val backgroundColor = preferenceStore.getInt("sub_color_bg", Color.Transparent.toArgb())
 
   val justification = preferenceStore.getEnum("sub_justify", SubtitleJustification.Auto)
